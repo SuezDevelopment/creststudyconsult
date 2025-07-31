@@ -522,70 +522,70 @@ export default function CrestStudyConsultV3() {
                 {[
                   {
                     name: "Harvard University",
-                    logo: "/placeholder.svg?height=80&width=120&text=Harvard",
+                    logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Harvard",
                   },
                   {
                     name: "MIT",
-                    logo: "/placeholder.svg?height=80&width=120&text=MIT",
+                    logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=MIT",
                   },
                   {
                     name: "Stanford",
-                    logo: "/placeholder.svg?height=80&width=120&text=Stanford",
+                    logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Stanford",
                   },
                   {
                     name: "University of Toronto",
-                    logo: "/placeholder.svg?height=80&width=120&text=Toronto",
+                    logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Toronto",
                   },
                   {
                     name: "Oxford",
-                    logo: "/placeholder.svg?height=80&width=120&text=Oxford",
+                    logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Oxford",
                   },
                   {
                     name: "Cambridge",
-                    logo: "/placeholder.svg?height=80&width=120&text=Cambridge",
+                    logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Cambridge",
                   },
                   {
                     name: "University of Melbourne",
-                    logo: "/placeholder.svg?height=80&width=120&text=Melbourne",
+                    logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Melbourne",
                   },
                   {
                     name: "UCLA",
-                    logo: "/placeholder.svg?height=80&width=120&text=UCLA",
+                    logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=UCLA",
                   },
                 ]
                   .concat([
                     // Duplicate for seamless loop
                     {
                       name: "Harvard University",
-                      logo: "/placeholder.svg?height=80&width=120&text=Harvard",
+                      logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Harvard",
                     },
                     {
                       name: "MIT",
-                      logo: "/placeholder.svg?height=80&width=120&text=MIT",
+                      logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=MIT",
                     },
                     {
                       name: "Stanford",
-                      logo: "/placeholder.svg?height=80&width=120&text=Stanford",
+                      logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Stanford",
                     },
                     {
                       name: "University of Toronto",
-                      logo: "/placeholder.svg?height=80&width=120&text=Toronto",
+                      logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Toronto",
                     },
                     {
                       name: "Oxford",
-                      logo: "/placeholder.svg?height=80&width=120&text=Oxford",
+                      logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Oxford",
                     },
                     {
                       name: "Cambridge",
-                      logo: "/placeholder.svg?height=80&width=120&text=Cambridge",
+                      logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Cambridge",
                     },
                     {
                       name: "University of Melbourne",
-                      logo: "/placeholder.svg?height=80&width=120&text=Melbourne",
+                      logo: "https://static.wixstatic.com/media/607463_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/607463_696d1e59e0784852950c003acb11dd9f~mv2.png",
                     },
                     {
                       name: "UCLA",
-                      logo: "/placeholder.svg?height=80&width=120&text=UCLA",
+                      logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png",
                     },
                   ])
                   .map((university, index) => (
@@ -599,7 +599,7 @@ export default function CrestStudyConsultV3() {
                         alt={university.name}
                         width={120}
                         height={80}
-                        className="grayscale group-hover:grayscale-0 transition-all duration-300 object-contain"
+                        className="group-hover:grayscale-0 transition-all duration-300 object-contain"
                       />
                     </motion.div>
                   ))}
@@ -607,7 +607,7 @@ export default function CrestStudyConsultV3() {
             </div>
 
             {/* Gradient Overlays */}
-            <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-blue-50 to-transparent pointer-events-none z-10" />
+            <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-yellow-50 to-transparent pointer-events-none z-10" />
             <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-green-50 to-transparent pointer-events-none z-10" />
           </motion.div>
 
