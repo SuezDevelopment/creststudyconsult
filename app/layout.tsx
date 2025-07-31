@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import SEO from "@/components/SEO";
 
@@ -19,10 +21,10 @@ export default function RootLayout({
         title={metadata.title as string}
         description={metadata.description as string}
         keywords="study abroad, international education, university consulting, student support, top universities, global education, study overseas, education consulting"
-        ogImage="https://creststudyconsult.com/og-image.jpg"
-        url="https://creststudyconsult.com" 
+        ogImage="https://creststudyconsult.com/og-image.jpg" // Replace with your actual image URL
+        url="https://creststudyconsult.com" // Replace with your actual site URL
       />
-      <body>
+       <body className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}>
         <main>{children}</main>
       </body>
     </html>

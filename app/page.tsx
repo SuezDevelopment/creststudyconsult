@@ -196,6 +196,31 @@ export default function CrestStudyConsultV3() {
           }}
         />
         <motion.div
+          className="absolute top-40 left-50 w-20 h-20 bg-[#DAA520]/20 rounded-full blur-xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.6, 0.3],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+          }}
+        />
+
+        <motion.div
+          className="absolute top-60 left-30 w-20 h-20 bg-[#DAA520]/20 rounded-full blur-xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.6, 0.3],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
           className="absolute bottom-20 right-10 w-32 h-32 bg-[#62b514]/20 rounded-full blur-xl"
           animate={{
             scale: [1.2, 1, 1.2],
@@ -436,67 +461,6 @@ export default function CrestStudyConsultV3() {
               worldwide to provide our students with the best educational
               opportunities
             </p>
-
-            {/* Statistics */}
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="flex flex-col sm:flex-row justify-center items-center gap-8 mt-12"
-            >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-[#DAA520]/20"
-              >
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ duration: 0.8, delay: 0.5, type: "spring" }}
-                  viewport={{ once: true }}
-                  className="text-4xl font-bold text-[#62b514] mb-2"
-                >
-                  10,000+
-                </motion.div>
-                <p className="text-gray-600 font-medium">
-                  Students Placed Globally
-                </p>
-              </motion.div>
-
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-[#DAA520]/20"
-              >
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ duration: 0.8, delay: 0.7, type: "spring" }}
-                  viewport={{ once: true }}
-                  className="text-4xl font-bold text-[#DAA520] mb-2"
-                >
-                  500+
-                </motion.div>
-                <p className="text-gray-600 font-medium">
-                  Partner Universities
-                </p>
-              </motion.div>
-
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-[#DAA520]/20"
-              >
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ duration: 0.8, delay: 0.9, type: "spring" }}
-                  viewport={{ once: true }}
-                  className="text-4xl font-bold text-[#313b3d] mb-2"
-                >
-                  50+
-                </motion.div>
-                <p className="text-gray-600 font-medium">Countries Worldwide</p>
-              </motion.div>
-            </motion.div>
           </motion.div>
 
           {/* University Logos Carousel */}
@@ -518,7 +482,6 @@ export default function CrestStudyConsultV3() {
                 className="flex space-x-12 items-center"
                 style={{ width: "calc(200% + 100px)" }}
               >
-                {/* First set of logos */}
                 {[
                   {
                     name: "Harvard University",
@@ -554,7 +517,6 @@ export default function CrestStudyConsultV3() {
                   },
                 ]
                   .concat([
-                    // Duplicate for seamless loop
                     {
                       name: "Harvard University",
                       logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Harvard",
