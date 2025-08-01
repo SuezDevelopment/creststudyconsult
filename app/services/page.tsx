@@ -29,7 +29,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Footer from "@/components/sections/footer";
 import CTA from "@/components/sections/cta";
 
@@ -44,6 +44,22 @@ export default function ServicesPage() {
   const servicesInView = useInView(servicesRef, { once: true, amount: 0.2 });
 
   const yPos = useTransform(scrollYProgress, [0, 1], [0, -50]);
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }, 1000);
+      }
+    }
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },

@@ -984,7 +984,7 @@ export default function CrestStudyConsult() {
                     "/placeholder.svg?height=200&width=200&text=Consultation",
                   color: "from-blue-400 to-blue-600",
                   delay: 0.2,
-                  slug: "counseling",
+                  slug: "#counseling",
                 },
                 {
                   step: "02",
@@ -995,7 +995,7 @@ export default function CrestStudyConsult() {
                     "/placeholder.svg?height=200&width=200&text=Application",
                   color: "from-green-400 to-green-600",
                   delay: 0.4,
-                  slug: "application",
+                  slug: "#application",
                 },
                 {
                   step: "03",
@@ -1005,7 +1005,7 @@ export default function CrestStudyConsult() {
                   image: "/v&t_preparation.webp",
                   color: "from-yellow-400 to-orange-500",
                   delay: 0.6,
-                  slug: "visa",
+                  slug: "#visa",
                 },
                 {
                   step: "04",
@@ -1015,7 +1015,7 @@ export default function CrestStudyConsult() {
                   image: "/placeholder.svg?height=200&width=200&text=Arrival",
                   color: "from-purple-400 to-pink-500",
                   delay: 0.8,
-                  slug: "pre-departure",
+                  slug: "#pre-departure",
                   featured: true,
                 },
               ].map((service, index) => (
@@ -1155,7 +1155,7 @@ export default function CrestStudyConsult() {
                         className="mt-4 text-[#62b514] font-semibold text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300"
                         whileHover={{ x: 5 }}
                         onClick={() => {
-                          router.push("/services/#" + service.slug);
+                          router.push("/services/" + service.slug);
                         }}
                       >
                         Learn More
@@ -1274,12 +1274,11 @@ export default function CrestStudyConsult() {
         </a>
       </section>
       {/* Success Stories Section - Creative Design */}
-      <section
+      {/* <section
         ref={testimonialsRef}
         id="testimonials"
         className="py-20 md:py-32 flex flex-col items-center bg-gradient-to-br from-[#313b3d]/5 via-[#DAA520]/5 to-[#62b514]/5 relative overflow-hidden w-full"
       >
-        {/* Decorative Elements */}
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 bg-[#DAA520]/10 rounded-full blur-3xl"
           animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
@@ -1301,7 +1300,6 @@ export default function CrestStudyConsult() {
         />
 
         <div className="container px-4 md:px-6 relative z-10 w-full">
-          {/* Creative Header */}
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             animate={
@@ -1328,7 +1326,6 @@ export default function CrestStudyConsult() {
             </p>
           </motion.div>
 
-          {/* Success Stories Grid */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -1377,7 +1374,6 @@ export default function CrestStudyConsult() {
                 className="group relative"
               >
                 <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 group-hover:shadow-2xl transition-all duration-500 relative">
-                  {/* Achievement Badge */}
                   <motion.div
                     className={`absolute top-4 right-4 z-20 bg-gradient-to-r ${story.color} text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg`}
                     initial={{ scale: 0, rotate: -45 }}
@@ -1387,7 +1383,6 @@ export default function CrestStudyConsult() {
                     {story.achievement}
                   </motion.div>
 
-                  {/* Flag */}
                   <motion.div
                     className="absolute top-4 left-4 z-20 text-2xl"
                     animate={{ rotate: [0, 10, -10, 0] }}
@@ -1400,7 +1395,6 @@ export default function CrestStudyConsult() {
                     {story.flag}
                   </motion.div>
 
-                  {/* Image Section */}
                   <div className="relative h-64 overflow-hidden">
                     <Image
                       src={story.image || "/placeholder.svg"}
@@ -1410,7 +1404,6 @@ export default function CrestStudyConsult() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
 
-                    {/* University Name Overlay */}
                     <div className="absolute bottom-4 left-4 right-4">
                       <p className="text-white text-sm font-medium opacity-90">
                         {story.university}
@@ -1418,9 +1411,7 @@ export default function CrestStudyConsult() {
                     </div>
                   </div>
 
-                  {/* Content */}
                   <div className="p-6 relative">
-                    {/* Background Pattern */}
                     <div className="absolute inset-0 opacity-5">
                       <svg className="w-full h-full" viewBox="0 0 100 100">
                         <pattern
@@ -1447,7 +1438,6 @@ export default function CrestStudyConsult() {
                           {story.name}
                         </h3>
 
-                        {/* Star Rating */}
                         <div className="flex space-x-1">
                           {[...Array(5)].map((_, i) => (
                             <motion.div
@@ -1478,7 +1468,6 @@ export default function CrestStudyConsult() {
                         </span>
                       </blockquote>
 
-                      {/* Social Proof */}
                       <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
                         <div className="flex items-center space-x-2 text-xs text-gray-500">
                           <Check className="w-3 h-3 text-green-500" />
@@ -1499,7 +1488,6 @@ export default function CrestStudyConsult() {
             ))}
           </motion.div>
 
-          {/* Call to Action */}
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             animate={
@@ -1523,7 +1511,8 @@ export default function CrestStudyConsult() {
             </motion.div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
+
       {/* Destinations Section */}
       <section
         ref={destinationsRef}
