@@ -998,7 +998,7 @@ export default function CrestStudyConsult() {
                   title: "Visa & Travel Preparation",
                   description:
                     "Comprehensive visa guidance and travel checklist to ensure smooth approval and departure planning.",
-                  image: "/placeholder.svg?height=200&width=200&text=Visa",
+                  image: "/v&t_preparation.webp",
                   color: "from-yellow-400 to-orange-500",
                   delay: 0.6,
                 },
@@ -1217,7 +1217,7 @@ export default function CrestStudyConsult() {
         <motion.div
           className="fixed bottom-8 right-8 z-50"
           initial={{ scale: 0, rotate: -180 }}
-          animate={{ scale: 1, rotate: 0 }}
+          animate={{ scale: 1.1, rotate: 0 }}
           transition={{ duration: 0.5, delay: 2 }}
         >
           <motion.div
@@ -1235,8 +1235,8 @@ export default function CrestStudyConsult() {
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
-              width="50"
-              height="50"
+              width="40"
+              height="40"
               viewBox="0 0 50 50"
               style={{ fill: "#ffffff", color: "#ffffff" }}
             >
