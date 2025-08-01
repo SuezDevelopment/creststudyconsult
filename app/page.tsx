@@ -29,10 +29,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useRef } from "react";
+import Footer from "@/components/sections/footer";
+import CTA from "@/components/sections/cta";
+import { useRouter } from "next/navigation";
 
 const mustardYellow = "#DAA520";
 
 export default function CrestStudyConsult() {
+  const router = useRouter();
   const { scrollYProgress } = useScroll();
   const heroRef = useRef(null);
   const servicesRef = useRef(null);
@@ -180,7 +184,7 @@ export default function CrestStudyConsult() {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="py-20 md:py-32 o bg-gradient-to-br from-green-50 via-yellow-50 to-emerald-100 overflow-hidden relative w-full flex flex-col items-center justify-center"
+        className="py-20 md:py-32  bg-gradient-to-br from-green-50 via-yellow-50 to-emerald-100 overflow-hidden relative w-full flex flex-col items-center justify-center"
       >
         {/* Background Elements */}
         <motion.div
@@ -980,6 +984,7 @@ export default function CrestStudyConsult() {
                     "/placeholder.svg?height=200&width=200&text=Consultation",
                   color: "from-blue-400 to-blue-600",
                   delay: 0.2,
+                  slug: "counseling",
                 },
                 {
                   step: "02",
@@ -990,6 +995,7 @@ export default function CrestStudyConsult() {
                     "/placeholder.svg?height=200&width=200&text=Application",
                   color: "from-green-400 to-green-600",
                   delay: 0.4,
+                  slug: "application",
                 },
                 {
                   step: "03",
@@ -999,6 +1005,7 @@ export default function CrestStudyConsult() {
                   image: "/v&t_preparation.webp",
                   color: "from-yellow-400 to-orange-500",
                   delay: 0.6,
+                  slug: "visa",
                 },
                 {
                   step: "04",
@@ -1008,6 +1015,7 @@ export default function CrestStudyConsult() {
                   image: "/placeholder.svg?height=200&width=200&text=Arrival",
                   color: "from-purple-400 to-pink-500",
                   delay: 0.8,
+                  slug: "pre-departure",
                   featured: true,
                 },
               ].map((service, index) => (
@@ -1146,6 +1154,9 @@ export default function CrestStudyConsult() {
                       <motion.button
                         className="mt-4 text-[#62b514] font-semibold text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300"
                         whileHover={{ x: 5 }}
+                        onClick={() => {
+                          router.push("/services/#" + service.slug);
+                        }}
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4" />
@@ -1262,7 +1273,6 @@ export default function CrestStudyConsult() {
           </motion.div>
         </a>
       </section>
-
       {/* Success Stories Section - Creative Design */}
       <section
         ref={testimonialsRef}
@@ -1514,7 +1524,6 @@ export default function CrestStudyConsult() {
           </motion.div>
         </div>
       </section>
-
       {/* Destinations Section */}
       <section
         ref={destinationsRef}
@@ -1687,298 +1696,9 @@ export default function CrestStudyConsult() {
           </motion.div>
         </div>
       </section>
-
-      {/* Final CTA Section */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="py-20 md:py-32 w-full flex flex-col items-center bg-gradient-to-r from-[#62b514] via-[#DAA520] to-[#62b514] text-white relative overflow-hidden"
-      >
-        <motion.div
-          className="absolute inset-0 bg-black/10"
-          animate={{
-            background: [
-              "linear-gradient(45deg, rgba(0,0,0,0.1) 0%, rgba(218,165,32,0.2) 50%, rgba(0,0,0,0.1) 100%)",
-              "linear-gradient(45deg, rgba(218,165,32,0.2) 0%, rgba(0,0,0,0.1) 50%, rgba(218,165,32,0.2) 100%)",
-            ],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Number.POSITIVE_INFINITY,
-            repeatType: "reverse",
-          }}
-        />
-
-        <div className="container px-4 md:px-6 text-center relative z-10">
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto space-y-8"
-          >
-            <motion.h2
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl"
-            >
-              Ready to Start Your Study Abroad Journey?
-            </motion.h2>
-
-            <motion.p
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="text-xl text-green-100"
-            >
-              Join thousands of students who have achieved their international
-              education dreams with Crest Study Consult. Book your free
-              consultation today and take the first step towards your global
-              future.
-            </motion.p>
-
-            <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
-              <motion.div
-                whileHover={{ scale: 1.05, y: -5 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="text-lg px-8 py-6 bg-white text-[#62b514] hover:bg-gray-100 shadow-xl"
-                >
-                  Book Free Consultation
-                  <motion.div
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{
-                      duration: 1.5,
-                      repeat: Number.POSITIVE_INFINITY,
-                    }}
-                  >
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </motion.div>
-                </Button>
-              </motion.div>
-
-              {/* <motion.div whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.98 }}>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-[#62b514] bg-transparent shadow-xl"
-                >
-                  Download Brochure
-                </Button>
-              </motion.div> */}
-            </motion.div>
-
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              viewport={{ once: true }}
-              className="text-sm text-green-200"
-            >
-              Free consultation • No hidden fees • Expert guidance
-            </motion.p>
-          </motion.div>
-        </div>
-      </motion.section>
-
+      <CTA />
       {/* Footer */}
-      <motion.footer
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        id="contact"
-        className="bg-[#313b3d] text-white py-16 w-full flex flex-col items-center"
-      >
-        <div className="container px-4 md:px-6">
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid gap-8 md:grid-cols-2 lg:grid-cols-5"
-          >
-            <motion.div variants={itemVariants} className="space-y-4">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="flex items-center space-x-3"
-              >
-                <Image
-                  src="/crest-logo.png"
-                  alt="Crest Study Consult"
-                  width={62}
-                  height={62}
-                  className="rounded-lg"
-                />
-                <div className="flex flex-col">
-                  <span className="text-lg font-bold text-[#62b514]">
-                    CREST
-                  </span>
-                  <span className="text-xs font-medium text-gray-300">
-                    STUDY CONSULT
-                  </span>
-                </div>
-              </motion.div>
-              <p className="text-gray-400">
-                Your trusted partner for international education. Guiding
-                students to achieve their study abroad dreams.
-              </p>
-              <div className="flex space-x-4">
-                {[Facebook, Twitter, Linkedin, Instagram].map((Icon, index) => (
-                  <motion.div
-                    key={index}
-                    whileHover={{ scale: 1.2, y: -2 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <Link
-                      href="#"
-                      className="text-gray-400 hover:text-[#DAA520] transition-colors"
-                    >
-                      <Icon className="h-5 w-5" />
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-
-            {[
-              {
-                title: "Services",
-                links: [
-                  "University Selection",
-                  "Application Support",
-                  "Visa Assistance",
-                  "Test Preparation",
-                ],
-              },
-              {
-                title: "Destinations",
-                links: ["USA", "Canada", "Australia", "UK"],
-              },
-              {
-                title: "Support",
-                links: ["Contact Us", "Student Portal", "Resources", "FAQ"],
-              },
-            ].map((section, sectionIndex) => (
-              <motion.div
-                key={section.title}
-                variants={itemVariants}
-                className="space-y-4"
-              >
-                <h4 className="text-lg font-semibold text-[#DAA520]">
-                  {section.title}
-                </h4>
-                <div className="space-y-2">
-                  {section.links.map((link, linkIndex) => (
-                    <motion.div
-                      key={link}
-                      initial={{ x: -20, opacity: 0 }}
-                      whileInView={{ x: 0, opacity: 1 }}
-                      transition={{
-                        delay: sectionIndex * 0.1 + linkIndex * 0.05,
-                      }}
-                      viewport={{ once: true }}
-                    >
-                      <Link
-                        href="#"
-                        className="block text-gray-400 hover:text-white transition-colors hover:translate-x-1 transform duration-200"
-                      >
-                        {link}
-                      </Link>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-
-             <motion.div variants={itemVariants} className="space-y-4">
-              <h4 className="text-lg font-semibold text-[#DAA520]">Visit Us</h4>
-              <div className="space-y-4">
-                <motion.div
-                  initial={{ x: -20, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ delay: 0.1 }}
-                  viewport={{ once: true }}
-                  className="space-y-2"
-                >
-                  <h5 className="text-sm font-semibold text-white">Lagos Office</h5>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    33B Akin Adesola St,
-                    <br />
-                    Victoria Island, Lagos 106104,
-                    <br />
-                    Lagos
-                  </p>
-                </motion.div>
-
-                <motion.div
-                  initial={{ x: -20, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ delay: 0.2 }}
-                  viewport={{ once: true }}
-                  className="space-y-2"
-                >
-                  <h5 className="text-sm font-semibold text-white">Ibadan Office</h5>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    16 Abba Yawuri Akobo,
-                    <br />
-                    Ojurin, Ibadan,
-                    <br />
-                    Oyo
-                  </p>
-                </motion.div>
-              </div>
-            </motion.div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            viewport={{ once: true }}
-            className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
-          >
-            <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Crest Study Consult. All rights
-              reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(
-                (link, index) => (
-                  <motion.div
-                    key={link}
-                    initial={{ y: 20, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ delay: index * 0.1 + 0.7 }}
-                    viewport={{ once: true }}
-                  >
-                    <Link
-                      href="#"
-                      className="text-gray-400 hover:text-[#DAA520] text-sm transition-colors"
-                    >
-                      {link}
-                    </Link>
-                  </motion.div>
-                )
-              )}
-            </div>
-          </motion.div>
-        </div>
-      </motion.footer>
+      <Footer />
     </div>
   );
 }
