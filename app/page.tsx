@@ -757,58 +757,58 @@ export default function CrestStudyConsultV3() {
                   },
                   {
                     name: "University of Toronto",
-                    logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Toronto",
+                    logo: "https://static.wixstatic.com/media/a585e3_562e71d261254d7dbe1ec746c79c58b1~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_562e71d261254d7dbe1ec746c79c58b1~mv2.png",
                   },
                   {
                     name: "Oxford",
-                    logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Oxford",
+                    logo: "https://static.wixstatic.com/media/a585e3_d66b507b9db1405ca3664df4bae4b4f2~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_d66b507b9db1405ca3664df4bae4b4f2~mv2.png",
                   },
                   {
                     name: "Cambridge",
-                    logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Cambridge",
+                    logo: "https://static.wixstatic.com/media/a585e3_bbfd7acb15b74e3fb9e56174eb12930a~mv2.jpeg/v1/fill/w_108,h_108,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_bbfd7acb15b74e3fb9e56174eb12930a~mv2.jpeg",
                   },
                   {
                     name: "University of Melbourne",
-                    logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Melbourne",
+                    logo: "https://static.wixstatic.com/media/a585e3_ef1780e6b40c4e59a688d5060944d955~mv2.png/v1/fill/w_158,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_ef1780e6b40c4e59a688d5060944d955~mv2.png",
                   },
                   {
                     name: "UCLA",
-                    logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=UCLA",
+                    logo: "https://static.wixstatic.com/media/a585e3_361d834801214013a759f3fdfa086e85~mv2.png/v1/fill/w_190,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_361d834801214013a759f3fdfa086e85~mv2.png",
                   },
                 ]
                   .concat([
-                    {
-                      name: "Harvard University",
-                      logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Harvard",
-                    },
-                    {
-                      name: "MIT",
-                      logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=MIT",
-                    },
-                    {
-                      name: "Stanford",
-                      logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Stanford",
-                    },
-                    {
-                      name: "University of Toronto",
-                      logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Toronto",
-                    },
-                    {
-                      name: "Oxford",
-                      logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Oxford",
-                    },
-                    {
-                      name: "Cambridge",
-                      logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Cambridge",
-                    },
-                    {
-                      name: "University of Melbourne",
-                      logo: "https://static.wixstatic.com/media/607463_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/607463_696d1e59e0784852950c003acb11dd9f~mv2.png",
-                    },
-                    {
-                      name: "UCLA",
-                      logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png",
-                    },
+                   {
+                    name: "Harvard University",
+                    logo: "https://static.wixstatic.com/media/a585e3_21267aaae64c4e8b8bccf9d4dd7a05a5~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_21267aaae64c4e8b8bccf9d4dd7a05a5~mv2.png",
+                  },
+                  {
+                    name: "MIT",
+                    logo: "https://static.wixstatic.com/media/a585e3_2a76028cab474f9c993738aca9997148~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_2a76028cab474f9c993738aca9997148~mv2.png",
+                  },
+                  {
+                    name: "Stanford",
+                    logo: "https://static.wixstatic.com/media/a585e3_6b0b82a2d4af42d1b98cbd9d59dbedb4~mv2.png/v1/fill/w_163,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_6b0b82a2d4af42d1b98cbd9d59dbedb4~mv2.png",
+                  },
+                  {
+                    name: "University of Toronto",
+                    logo: "https://static.wixstatic.com/media/a585e3_562e71d261254d7dbe1ec746c79c58b1~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_562e71d261254d7dbe1ec746c79c58b1~mv2.png",
+                  },
+                  {
+                    name: "Oxford",
+                    logo: "https://static.wixstatic.com/media/a585e3_d66b507b9db1405ca3664df4bae4b4f2~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_d66b507b9db1405ca3664df4bae4b4f2~mv2.png",
+                  },
+                  {
+                    name: "Cambridge",
+                    logo: "https://static.wixstatic.com/media/a585e3_bbfd7acb15b74e3fb9e56174eb12930a~mv2.jpeg/v1/fill/w_108,h_108,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_bbfd7acb15b74e3fb9e56174eb12930a~mv2.jpeg",
+                  },
+                  {
+                    name: "University of Melbourne",
+                    logo: "https://static.wixstatic.com/media/a585e3_ef1780e6b40c4e59a688d5060944d955~mv2.png/v1/fill/w_158,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_ef1780e6b40c4e59a688d5060944d955~mv2.png",
+                  },
+                  {
+                    name: "UCLA",
+                    logo: "https://static.wixstatic.com/media/a585e3_361d834801214013a759f3fdfa086e85~mv2.png/v1/fill/w_190,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_361d834801214013a759f3fdfa086e85~mv2.png",
+                  },
                   ])
                   .map((university, index) => (
                     <motion.div
