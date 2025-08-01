@@ -981,7 +981,7 @@ export default function CrestStudyConsult() {
                   description:
                     "Expert counselors help you discover the perfect program that aligns with your career goals and budget.",
                   image:
-                    "/placeholder.svg?height=200&width=200&text=Consultation",
+                    "https://catilas.com/wp-content/uploads/2020/04/advisory-840x560.webp",
                   color: "from-blue-400 to-blue-600",
                   delay: 0.2,
                   slug: "#counseling",
@@ -992,7 +992,7 @@ export default function CrestStudyConsult() {
                   description:
                     "Complete application assistance with essays, documentation, and interview preparation for maximum success.",
                   image:
-                    "/placeholder.svg?height=200&width=200&text=Application",
+                    "https://catilas.com/wp-content/uploads/2024/10/c_bkgchk-840x560.webp",
                   color: "from-green-400 to-green-600",
                   delay: 0.4,
                   slug: "#application",
@@ -1012,7 +1012,7 @@ export default function CrestStudyConsult() {
                   title: "Pre-Departure & Arrival Support",
                   description:
                     "Complete orientation including accommodation, cultural preparation, and ongoing support in your new country.",
-                  image: "/placeholder.svg?height=200&width=200&text=Arrival",
+                  image: "https://catilas.com/wp-content/uploads/2020/04/training-840x560.webp",
                   color: "from-purple-400 to-pink-500",
                   delay: 0.8,
                   slug: "#pre-departure",
