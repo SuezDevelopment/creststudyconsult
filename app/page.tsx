@@ -745,15 +745,15 @@ export default function CrestStudyConsultV3() {
                 {[
                   {
                     name: "Harvard University",
-                    logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Harvard",
+                    logo: "https://static.wixstatic.com/media/a585e3_21267aaae64c4e8b8bccf9d4dd7a05a5~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_21267aaae64c4e8b8bccf9d4dd7a05a5~mv2.png",
                   },
                   {
                     name: "MIT",
-                    logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=MIT",
+                    logo: "https://static.wixstatic.com/media/a585e3_2a76028cab474f9c993738aca9997148~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_2a76028cab474f9c993738aca9997148~mv2.png",
                   },
                   {
                     name: "Stanford",
-                    logo: "https://static.wixstatic.com/media/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_696d1e59e0784852950c003acb11dd9f~mv2.png?height=80&width=120&text=Stanford",
+                    logo: "https://static.wixstatic.com/media/a585e3_6b0b82a2d4af42d1b98cbd9d59dbedb4~mv2.png/v1/fill/w_163,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_6b0b82a2d4af42d1b98cbd9d59dbedb4~mv2.png",
                   },
                   {
                     name: "University of Toronto",
