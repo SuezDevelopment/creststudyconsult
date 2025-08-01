@@ -32,7 +32,7 @@ import { useRef } from "react";
 
 const mustardYellow = "#DAA520";
 
-export default function CrestStudyConsultV3() {
+export default function CrestStudyConsult() {
   const { scrollYProgress } = useScroll();
   const heroRef = useRef(null);
   const servicesRef = useRef(null);
@@ -118,7 +118,7 @@ export default function CrestStudyConsultV3() {
             <Image
               src="/crest-logo.png"
               alt="Crest Study Consult"
-              width={40}
+              width={60}
               height={40}
               className="rounded-lg"
             />
@@ -143,7 +143,7 @@ export default function CrestStudyConsultV3() {
                     to={item.toLowerCase().replace(" ", "")}
                     smooth={true}
                     duration={500}
-                    offset={-80} // adjust for fixed header height if needed
+                    offset={-80}
                     className="text-sm font-medium hover:text-[#62b514] transition-colors relative cursor-pointer group"
                   >
                     {item}
@@ -583,11 +583,11 @@ export default function CrestStudyConsultV3() {
             >
               <motion.div style={{ y: yPos, opacity }} className="relative">
                 <Image
-                  src="/placeholder.svg?height=200&width=800"
+                  src="/hero_image.png"
                   alt="Students studying abroad"
                   width={800}
                   height={600}
-                  className="rounded-xl shadow-2xl"
+                  className=""
                 />
               </motion.div>
 
@@ -814,14 +814,14 @@ export default function CrestStudyConsultV3() {
                     <motion.div
                       key={`${university.name}-${index}`}
                       whileHover={{ scale: 1.1, y: -5 }}
-                      className="flex-shrink-0 backdrop-blur-sm  transition-all duration-300 group"
+                      className="flex-shrink-0  transition-all duration-300 group"
                     >
                       <Image
                         src={university.logo || "/placeholder.svg"}
                         alt={university.name}
                         width={120}
                         height={80}
-                        className="group-hover:grayscale-0 transition-all duration-300 object-contain"
+                        className="transition-all duration-300 object-contain"
                       />
                     </motion.div>
                   ))}
