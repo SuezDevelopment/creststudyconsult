@@ -1212,7 +1212,10 @@ export default function CrestStudyConsult() {
         </div>
 
         {/* Floating Chat Bubble */}
-        <a target="_blank"  href="https://wa.me/+2349048510888?text=Hello%20there!%20I%20would%20like%20to%20inquire%20about%20">
+        <a
+          target="_blank"
+          href="https://wa.me/+2349048510888?text=Hello%20there!%20I%20would%20like%20to%20inquire%20about%20"
+        >
           <motion.div
             className="fixed bottom-8 right-8 z-50"
             initial={{ scale: 0, rotate: -180 }}
@@ -1807,7 +1810,7 @@ export default function CrestStudyConsult() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid gap-8 md:grid-cols-2 lg:grid-cols-4"
+            className="grid gap-8 md:grid-cols-2 lg:grid-cols-5"
           >
             <motion.div variants={itemVariants} className="space-y-4">
               <motion.div
@@ -1901,6 +1904,45 @@ export default function CrestStudyConsult() {
                 </div>
               </motion.div>
             ))}
+
+             <motion.div variants={itemVariants} className="space-y-4">
+              <h4 className="text-lg font-semibold text-[#DAA520]">Visit Us</h4>
+              <div className="space-y-4">
+                <motion.div
+                  initial={{ x: -20, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="space-y-2"
+                >
+                  <h5 className="text-sm font-semibold text-white">Lagos Office</h5>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    33B Akin Adesola St,
+                    <br />
+                    Victoria Island, Lagos 106104,
+                    <br />
+                    Lagos
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ x: -20, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="space-y-2"
+                >
+                  <h5 className="text-sm font-semibold text-white">Ibadan Office</h5>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    16 Abba Yawuri Akobo,
+                    <br />
+                    Ojurin, Ibadan,
+                    <br />
+                    Oyo
+                  </p>
+                </motion.div>
+              </div>
+            </motion.div>
           </motion.div>
 
           <motion.div
