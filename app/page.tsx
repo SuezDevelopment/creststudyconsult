@@ -659,6 +659,179 @@ export default function CrestStudyConsult() {
         </motion.div>
       </section>
 
+
+      {/* Institutions Working With Us Section */}
+      <section className="py-20 md:py-32 flex flex-col items-center relative overflow-hidden bg-gradient-to-br from-yellow-50 via-white to-green-50 w-full">
+        <div
+          className="absolute inset-0 opacity-10 bg-center bg-no-repeat bg-cover"
+          style={{
+            backgroundImage: "url('/world-map-dots.png')",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+          }}
+        />
+
+        <motion.div
+          className="absolute top-10 left-10 w-24 h-24 bg-[#DAA520]/10 rounded-full blur-xl"
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.3, 0.6, 0.3],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-20 right-20 w-32 h-32 bg-[#62b514]/10 rounded-full blur-xl"
+          animate={{
+            scale: [1.2, 1, 1.2],
+            opacity: [0.4, 0.7, 0.4],
+          }}
+          transition={{
+            duration: 7,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+          }}
+        />
+
+        <div className="container px-4 md:px-6 relative z-10 ">
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center space-y-6 mb-16"
+          >
+            <Badge
+              variant="outline"
+              className="w-fit mx-auto border-[#DAA520] text-[#DAA520] bg-[#DAA520]/5"
+            >
+              Global Network
+            </Badge>
+
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+              Institutions Working
+              <span className="text-[#62b514]"> With Us</span>
+            </h2>
+
+            <p className="text-xl text-gray-600 max-w-[800px] mx-auto">
+              We have partnered with prestigious universities and institutions
+              worldwide to provide our students with the best educational
+              opportunities
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            <div className="overflow-hidden">
+              <motion.div
+                animate={{ x: [0, -100 * 8] }}
+                transition={{
+                  duration: 30,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "linear",
+                }}
+                className="flex space-x-12 items-center"
+                style={{ width: "calc(200% + 100px)" }}
+              >
+                {[
+                  {
+                    name: "Harvard University",
+                    logo: "https://static.wixstatic.com/media/a585e3_21267aaae64c4e8b8bccf9d4dd7a05a5~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_21267aaae64c4e8b8bccf9d4dd7a05a5~mv2.png",
+                  },
+                  {
+                    name: "MIT",
+                    logo: "https://static.wixstatic.com/media/a585e3_2a76028cab474f9c993738aca9997148~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_2a76028cab474f9c993738aca9997148~mv2.png",
+                  },
+                  {
+                    name: "Stanford",
+                    logo: "https://static.wixstatic.com/media/a585e3_6b0b82a2d4af42d1b98cbd9d59dbedb4~mv2.png/v1/fill/w_163,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_6b0b82a2d4af42d1b98cbd9d59dbedb4~mv2.png",
+                  },
+                  {
+                    name: "University of Toronto",
+                    logo: "https://static.wixstatic.com/media/a585e3_562e71d261254d7dbe1ec746c79c58b1~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_562e71d261254d7dbe1ec746c79c58b1~mv2.png",
+                  },
+                  {
+                    name: "Oxford",
+                    logo: "https://static.wixstatic.com/media/a585e3_d66b507b9db1405ca3664df4bae4b4f2~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_d66b507b9db1405ca3664df4bae4b4f2~mv2.png",
+                  },
+                  {
+                    name: "Cambridge",
+                    logo: "https://static.wixstatic.com/media/a585e3_bbfd7acb15b74e3fb9e56174eb12930a~mv2.jpeg/v1/fill/w_108,h_108,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_bbfd7acb15b74e3fb9e56174eb12930a~mv2.jpeg",
+                  },
+                  {
+                    name: "University of Melbourne",
+                    logo: "https://static.wixstatic.com/media/a585e3_ef1780e6b40c4e59a688d5060944d955~mv2.png/v1/fill/w_158,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_ef1780e6b40c4e59a688d5060944d955~mv2.png",
+                  },
+                  {
+                    name: "UCLA",
+                    logo: "https://static.wixstatic.com/media/a585e3_361d834801214013a759f3fdfa086e85~mv2.png/v1/fill/w_190,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_361d834801214013a759f3fdfa086e85~mv2.png",
+                  },
+                ]
+                  .concat([
+                    {
+                      name: "Harvard University",
+                      logo: "https://static.wixstatic.com/media/a585e3_21267aaae64c4e8b8bccf9d4dd7a05a5~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_21267aaae64c4e8b8bccf9d4dd7a05a5~mv2.png",
+                    },
+                    {
+                      name: "MIT",
+                      logo: "https://static.wixstatic.com/media/a585e3_2a76028cab474f9c993738aca9997148~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_2a76028cab474f9c993738aca9997148~mv2.png",
+                    },
+                    {
+                      name: "Stanford",
+                      logo: "https://static.wixstatic.com/media/a585e3_6b0b82a2d4af42d1b98cbd9d59dbedb4~mv2.png/v1/fill/w_163,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_6b0b82a2d4af42d1b98cbd9d59dbedb4~mv2.png",
+                    },
+                    {
+                      name: "University of Toronto",
+                      logo: "https://static.wixstatic.com/media/a585e3_562e71d261254d7dbe1ec746c79c58b1~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_562e71d261254d7dbe1ec746c79c58b1~mv2.png",
+                    },
+                    {
+                      name: "Oxford",
+                      logo: "https://static.wixstatic.com/media/a585e3_d66b507b9db1405ca3664df4bae4b4f2~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_d66b507b9db1405ca3664df4bae4b4f2~mv2.png",
+                    },
+                    {
+                      name: "Cambridge",
+                      logo: "https://static.wixstatic.com/media/a585e3_bbfd7acb15b74e3fb9e56174eb12930a~mv2.jpeg/v1/fill/w_108,h_108,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_bbfd7acb15b74e3fb9e56174eb12930a~mv2.jpeg",
+                    },
+                    {
+                      name: "University of Melbourne",
+                      logo: "https://static.wixstatic.com/media/a585e3_ef1780e6b40c4e59a688d5060944d955~mv2.png/v1/fill/w_158,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_ef1780e6b40c4e59a688d5060944d955~mv2.png",
+                    },
+                    {
+                      name: "UCLA",
+                      logo: "https://static.wixstatic.com/media/a585e3_361d834801214013a759f3fdfa086e85~mv2.png/v1/fill/w_190,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_361d834801214013a759f3fdfa086e85~mv2.png",
+                    },
+                  ])
+                  .map((university, index) => (
+                    <motion.div
+                      key={`${university.name}-${index}`}
+                      whileHover={{ scale: 1.1, y: -5 }}
+                      className="flex-shrink-0  transition-all duration-300 group"
+                    >
+                      <Image
+                        src={university.logo || "/placeholder.svg"}
+                        alt={university.name}
+                        width={120}
+                        height={80}
+                        className="transition-all duration-300 object-contain"
+                      />
+                    </motion.div>
+                  ))}
+              </motion.div>
+            </div>
+            <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-yellow-50 to-transparent pointer-events-none z-10" />
+            <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-green-50 to-transparent pointer-events-none z-10" />
+          </motion.div>
+        </div>
+      </section>
+
       {/* Services Section - Creative Journey Design */}
       <section
         ref={servicesRef}
@@ -1489,177 +1662,7 @@ export default function CrestStudyConsult() {
           </motion.div>
         </div>
       </section>
-       {/* Institutions Working With Us Section */}
-      <section className="py-20 md:py-32 flex flex-col items-center relative overflow-hidden bg-gradient-to-br from-yellow-50 via-white to-green-50 w-full">
-        <div
-          className="absolute inset-0 opacity-10 bg-center bg-no-repeat bg-cover"
-          style={{
-            backgroundImage: "url('/world-map-dots.png')",
-            backgroundSize: "contain",
-            backgroundPosition: "center",
-          }}
-        />
-
-        <motion.div
-          className="absolute top-10 left-10 w-24 h-24 bg-[#DAA520]/10 rounded-full blur-xl"
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-20 right-20 w-32 h-32 bg-[#62b514]/10 rounded-full blur-xl"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.4, 0.7, 0.4],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-          }}
-        />
-
-        <div className="container px-4 md:px-6 relative z-10 ">
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center space-y-6 mb-16"
-          >
-            <Badge
-              variant="outline"
-              className="w-fit mx-auto border-[#DAA520] text-[#DAA520] bg-[#DAA520]/5"
-            >
-              Global Network
-            </Badge>
-
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              Institutions Working
-              <span className="text-[#62b514]"> With Us</span>
-            </h2>
-
-            <p className="text-xl text-gray-600 max-w-[800px] mx-auto">
-              We have partnered with prestigious universities and institutions
-              worldwide to provide our students with the best educational
-              opportunities
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="overflow-hidden">
-              <motion.div
-                animate={{ x: [0, -100 * 8] }}
-                transition={{
-                  duration: 30,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "linear",
-                }}
-                className="flex space-x-12 items-center"
-                style={{ width: "calc(200% + 100px)" }}
-              >
-                {[
-                  {
-                    name: "Harvard University",
-                    logo: "https://static.wixstatic.com/media/a585e3_21267aaae64c4e8b8bccf9d4dd7a05a5~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_21267aaae64c4e8b8bccf9d4dd7a05a5~mv2.png",
-                  },
-                  {
-                    name: "MIT",
-                    logo: "https://static.wixstatic.com/media/a585e3_2a76028cab474f9c993738aca9997148~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_2a76028cab474f9c993738aca9997148~mv2.png",
-                  },
-                  {
-                    name: "Stanford",
-                    logo: "https://static.wixstatic.com/media/a585e3_6b0b82a2d4af42d1b98cbd9d59dbedb4~mv2.png/v1/fill/w_163,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_6b0b82a2d4af42d1b98cbd9d59dbedb4~mv2.png",
-                  },
-                  {
-                    name: "University of Toronto",
-                    logo: "https://static.wixstatic.com/media/a585e3_562e71d261254d7dbe1ec746c79c58b1~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_562e71d261254d7dbe1ec746c79c58b1~mv2.png",
-                  },
-                  {
-                    name: "Oxford",
-                    logo: "https://static.wixstatic.com/media/a585e3_d66b507b9db1405ca3664df4bae4b4f2~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_d66b507b9db1405ca3664df4bae4b4f2~mv2.png",
-                  },
-                  {
-                    name: "Cambridge",
-                    logo: "https://static.wixstatic.com/media/a585e3_bbfd7acb15b74e3fb9e56174eb12930a~mv2.jpeg/v1/fill/w_108,h_108,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_bbfd7acb15b74e3fb9e56174eb12930a~mv2.jpeg",
-                  },
-                  {
-                    name: "University of Melbourne",
-                    logo: "https://static.wixstatic.com/media/a585e3_ef1780e6b40c4e59a688d5060944d955~mv2.png/v1/fill/w_158,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_ef1780e6b40c4e59a688d5060944d955~mv2.png",
-                  },
-                  {
-                    name: "UCLA",
-                    logo: "https://static.wixstatic.com/media/a585e3_361d834801214013a759f3fdfa086e85~mv2.png/v1/fill/w_190,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_361d834801214013a759f3fdfa086e85~mv2.png",
-                  },
-                ]
-                  .concat([
-                    {
-                      name: "Harvard University",
-                      logo: "https://static.wixstatic.com/media/a585e3_21267aaae64c4e8b8bccf9d4dd7a05a5~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_21267aaae64c4e8b8bccf9d4dd7a05a5~mv2.png",
-                    },
-                    {
-                      name: "MIT",
-                      logo: "https://static.wixstatic.com/media/a585e3_2a76028cab474f9c993738aca9997148~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_2a76028cab474f9c993738aca9997148~mv2.png",
-                    },
-                    {
-                      name: "Stanford",
-                      logo: "https://static.wixstatic.com/media/a585e3_6b0b82a2d4af42d1b98cbd9d59dbedb4~mv2.png/v1/fill/w_163,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_6b0b82a2d4af42d1b98cbd9d59dbedb4~mv2.png",
-                    },
-                    {
-                      name: "University of Toronto",
-                      logo: "https://static.wixstatic.com/media/a585e3_562e71d261254d7dbe1ec746c79c58b1~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_562e71d261254d7dbe1ec746c79c58b1~mv2.png",
-                    },
-                    {
-                      name: "Oxford",
-                      logo: "https://static.wixstatic.com/media/a585e3_d66b507b9db1405ca3664df4bae4b4f2~mv2.png/v1/fill/w_108,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_d66b507b9db1405ca3664df4bae4b4f2~mv2.png",
-                    },
-                    {
-                      name: "Cambridge",
-                      logo: "https://static.wixstatic.com/media/a585e3_bbfd7acb15b74e3fb9e56174eb12930a~mv2.jpeg/v1/fill/w_108,h_108,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_bbfd7acb15b74e3fb9e56174eb12930a~mv2.jpeg",
-                    },
-                    {
-                      name: "University of Melbourne",
-                      logo: "https://static.wixstatic.com/media/a585e3_ef1780e6b40c4e59a688d5060944d955~mv2.png/v1/fill/w_158,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_ef1780e6b40c4e59a688d5060944d955~mv2.png",
-                    },
-                    {
-                      name: "UCLA",
-                      logo: "https://static.wixstatic.com/media/a585e3_361d834801214013a759f3fdfa086e85~mv2.png/v1/fill/w_190,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a585e3_361d834801214013a759f3fdfa086e85~mv2.png",
-                    },
-                  ])
-                  .map((university, index) => (
-                    <motion.div
-                      key={`${university.name}-${index}`}
-                      whileHover={{ scale: 1.1, y: -5 }}
-                      className="flex-shrink-0  transition-all duration-300 group"
-                    >
-                      <Image
-                        src={university.logo || "/placeholder.svg"}
-                        alt={university.name}
-                        width={120}
-                        height={80}
-                        className="transition-all duration-300 object-contain"
-                      />
-                    </motion.div>
-                  ))}
-              </motion.div>
-            </div>
-            <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-yellow-50 to-transparent pointer-events-none z-10" />
-            <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-green-50 to-transparent pointer-events-none z-10" />
-          </motion.div>
-        </div>
-      </section>
+       
       <CTA />
       {/* Footer */}
       <Footer />
