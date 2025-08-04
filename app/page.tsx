@@ -112,7 +112,7 @@ export default function CrestStudyConsult() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="sticky top-0 z-50 w-full flex items-center justify-around border-b bg-white/98 backdrop-blur supports-[backdrop-filter]:bg-white/60 w-full"
+        className="sticky top-0 z-50 w-full flex items-center justify-around border-b bg-white/98 backdrop-blur supports-[backdrop-filter]:bg-white/60"
       >
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
           <motion.div
@@ -487,7 +487,7 @@ export default function CrestStudyConsult() {
                   variants={itemVariants}
                   className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
                 >
-                  Study Abroad
+                  Study Abroad 
                   <motion.span
                     className="text-[#62b514] inline-block"
                     whileHover={{

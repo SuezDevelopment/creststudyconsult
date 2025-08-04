@@ -165,7 +165,7 @@ export default function Footer() {
                   Ibadan Office
                 </h5>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  16 Abba Yawuri Akobo,
+                  16 Yawuri Akobo,
                   <br />
                   Ojurin, Ibadan,
                   <br />
