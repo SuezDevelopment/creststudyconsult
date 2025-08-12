@@ -5,12 +5,17 @@ import { GeistMono } from "geist/font/mono";
 import SEO from "@/components/SEO";
 
 export const metadata: Metadata = {
-  title: "Our Services - Crest Study Consult: Comprehensive Study Abroad Solutions",
-  description: "Explore Crest Study Consult's comprehensive services: Educational Counseling, University Application Support, Visa Assistance, Test Preparation, Financial Planning, and Pre-Departure Support. Your complete solution for studying abroad.",
-  keywords: "educational counseling, university application, visa assistance, test preparation, IELTS, TOEFL, GRE, GMAT, SAT, financial planning, scholarships, pre-departure support, study abroad services, international education, student consulting",
+  title:
+    "Our Services - Crest Study Consult: Comprehensive Study Abroad Solutions",
+  description:
+    "Explore Crest Study Consult's comprehensive services: Educational Counseling, University Application Support, Visa Assistance, Test Preparation, Financial Planning, and Pre-Departure Support. Your complete solution for studying abroad.",
+  keywords:
+    "educational counseling, university application, visa assistance, test preparation, IELTS, TOEFL, GRE, GMAT, SAT, financial planning, scholarships, pre-departure support, study abroad services, international education, student consulting",
   openGraph: {
-    title: "Our Services - Crest Study Consult: Comprehensive Study Abroad Solutions",
-    description: "Explore Crest Study Consult's comprehensive services: Educational Counseling, University Application Support, Visa Assistance, Test Preparation, Financial Planning, and Pre-Departure Support. Your complete solution for studying abroad.",
+    title:
+      "Our Services - Crest Study Consult: Comprehensive Study Abroad Solutions",
+    description:
+      "Explore Crest Study Consult's comprehensive services: Educational Counseling, University Application Support, Visa Assistance, Test Preparation, Financial Planning, and Pre-Departure Support. Your complete solution for studying abroad.",
     url: "https://creststudyconsult.com/services",
     type: "website",
     images: [
@@ -24,8 +29,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Services - Crest Study Consult: Comprehensive Study Abroad Solutions",
-    description: "Explore Crest Study Consult's comprehensive services: Educational Counseling, University Application Support, Visa Assistance, Test Preparation, Financial Planning, and Pre-Departure Support. Your complete solution for studying abroad.",
+    title:
+      "Our Services - Crest Study Consult: Comprehensive Study Abroad Solutions",
+    description:
+      "Explore Crest Study Consult's comprehensive services: Educational Counseling, University Application Support, Visa Assistance, Test Preparation, Financial Planning, and Pre-Departure Support. Your complete solution for studying abroad.",
     images: ["https://creststudyconsult.com/twitter-image-services.jpg"],
   },
 };
@@ -36,17 +43,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <SEO 
+    <>
+      <SEO
         title={metadata.title as string}
         description={metadata.description as string}
         keywords={metadata.keywords as string}
-        ogImage={(metadata.openGraph?.images as { url: string }[])?.[0]?.url as string}
+        ogImage={
+          (metadata.openGraph?.images as { url: string }[])?.[0]?.url as string
+        }
         url={metadata.openGraph?.url as string}
       />
-       <body className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}>
-        <main>{children}</main>
-      </body>
-    </html>
+      {children}
+    </>
   );
 }
