@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: process.env.SITE_URL || 'https://creststudyconsult.com',
+    siteUrl: process.env.SITE_URL || 'https://www.creststudyconsult.com',
     generateRobotsTxt: true,
     changefreq: 'daily',
     priority: 0.7,

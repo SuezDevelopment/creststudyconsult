@@ -7,7 +7,8 @@ User-agent: *
 Disallow: /_not-found
 
 # Host
-Host: https://creststudyconsult.com
+Host: https://www.creststudyconsult.com
 
 # Sitemaps
+Sitemap: https://www.creststudyconsult.com/sitemap.xml
 Sitemap: https://creststudyconsult.com/sitemap.xml
