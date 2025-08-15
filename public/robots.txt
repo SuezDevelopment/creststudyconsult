@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /_not-found
+
+# Host
+Host: https://creststudyconsult.com
+
+# Sitemaps
+Sitemap: https://creststudyconsult.com/sitemap.xml
