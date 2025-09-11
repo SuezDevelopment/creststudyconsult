@@ -188,7 +188,7 @@ export const BookingModal = ({ fullscreen }: { fullscreen?: boolean }) => {
                 <div className="flex items-center space-x-2">
                   <Checkbox id="updates" />
                   <Label htmlFor="updates" className="text-sm">
-                    I would like to receive updates and offers from IDP
+                    I would like to receive updates and offers from Crest Study Consult
                   </Label>
                 </div>
               </div>
