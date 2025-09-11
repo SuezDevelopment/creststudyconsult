@@ -1,9 +1,10 @@
+'use client';
 import { motion } from "framer-motion";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Footer() {
+export default function FooterSection() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -23,6 +24,33 @@ export default function Footer() {
       transition: {},
     },
   };
+
+  const iconsWithLinks = [
+    { icon: Facebook, link: "https://facebook.com/creststudyconsult" },
+    { icon: Twitter, link: "https://x.com/creststudyconsult" },
+    {
+      icon: Linkedin,
+      link: "https://www.linkedin.com/company/creststudyconsult",
+    },
+    { icon: Instagram, link: "https://instagram.com/creststudyconsult" },
+  ];
+
+
+  const footerUpperLinks = [
+    { title: "Services", links: [{ title: "University Selection", link: "/services/university-selection" }, { title: "Application Support", link: "/services/application-support" }, { title: "Visa Assistance", link: "/services/visa-assistance" }, { title: "Test Preparation", link: "/services/test-preparation" }] },
+    { title: "Study Destinations", links: [{ title: "USA", link: "/study-destinations/study-in-usa" }, { title: "Canada", link: "/study-destinations/study-in-canada" }, { title: "Australia", link: "/study-destinations/study-in-australia" }, { title: "UK", link: "/study-destinations/study-in-uk" }, { title: "Germany", link: "/study-destinations/study-in-germany" }, { title: "Ireland", link: "/study-destinations/study-in-ireland" }, { title: "New Zealand", link: "/study-destinations/study-in-new_zealand" }] },
+    { title: "Support", links: [{ title: "Contact Us", link: "/contact" }, { title: "Student Portal", link: "/student-portal" }, { title: "Resources", link: "/resources" }, { title: "FAQ", link: "/faq" }] },
+  ]
+
+
+  const footerLinks = [
+    { title: "Privacy Policy", link: "/privacy-policy" },
+    { title: "Terms of Use", link: "/terms-of-use" },
+    { title: "Disclaimer", link: "/disclaimer" },
+  ];
+
+
+
 
   return (
     <motion.footer
@@ -55,52 +83,34 @@ export default function Footer() {
               />
               <div className="flex flex-col">
                 <span className="text-lg font-bold text-[#62b514]">CREST</span>
-                <span className="text-xs font-medium text-gray-300">
+                <span className="text-xs font-semibold text-white">
                   STUDY CONSULT
                 </span>
               </div>
             </motion.div>
-            <p className="text-gray-400">
+            <p className="text-white text-sm md:text-base leading-relaxed">
               Your trusted partner for international education. Guiding students
               to achieve their study abroad dreams.
             </p>
             <div className="flex space-x-4">
-              {[Facebook, Twitter, Linkedin, Instagram].map((Icon, index) => (
+              {iconsWithLinks.map((Icon, index) => (
                 <motion.div
                   key={index}
                   whileHover={{ scale: 1.2, y: -2 }}
                   whileTap={{ scale: 0.9 }}
                 >
                   <Link
-                    href="#"
-                    className="text-gray-400 hover:text-[#DAA520] transition-colors"
+                    href={Icon.link}
+                    className="text-white hover:text-[#DAA520] transition-colors"
                   >
-                    <Icon className="h-5 w-5" />
+                    <Icon.icon className="h-5 w-5" />
                   </Link>
                 </motion.div>
               ))}
             </div>
           </motion.div>
 
-          {[
-            {
-              title: "Services",
-              links: [
-                "University Selection",
-                "Application Support",
-                "Visa Assistance",
-                "Test Preparation",
-              ],
-            },
-            {
-              title: "Destinations",
-              links: ["USA", "Canada", "Australia", "UK"],
-            },
-            {
-              title: "Support",
-              links: ["Contact Us", "Student Portal", "Resources", "FAQ"],
-            },
-          ].map((section, sectionIndex) => (
+          {footerUpperLinks.map((section, sectionIndex) => (
             <motion.div
               key={section.title}
               variants={itemVariants}
@@ -112,7 +122,7 @@ export default function Footer() {
               <div className="space-y-2">
                 {section.links.map((link, linkIndex) => (
                   <motion.div
-                    key={link}
+                    key={link.title}
                     initial={{ x: -20, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{
@@ -121,10 +131,10 @@ export default function Footer() {
                     viewport={{ once: true }}
                   >
                     <Link
-                      href="#"
-                      className="block text-gray-400 hover:text-white transition-colors hover:translate-x-1 transform duration-200"
+                      href={link.link}
+                      className="block text-white hover:text-[#DAA520] transition-colors hover:translate-x-1 transform duration-200"
                     >
-                      {link}
+                      {link.title}
                     </Link>
                   </motion.div>
                 ))}
@@ -142,10 +152,10 @@ export default function Footer() {
                 viewport={{ once: true }}
                 className="space-y-2"
               >
-                <h5 className="text-sm font-semibold text-white">
+                <h5 className="text-md font-semibold text-[#62b514]">
                   Lagos Office
                 </h5>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-white text-sm leading-relaxed">
                   33B Akin Adesola St,
                   <br />
                   Victoria Island, Lagos 106104,
@@ -161,10 +171,10 @@ export default function Footer() {
                 viewport={{ once: true }}
                 className="space-y-2"
               >
-                <h5 className="text-sm font-semibold text-white">
+                <h5 className="text-md font-semibold text-[#62b514]">
                   Ibadan Office
                 </h5>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-white text-sm leading-relaxed">
                   16 Yawuri Akobo,
                   <br />
                   Ojurin, Ibadan,
@@ -181,27 +191,28 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
-          className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+          className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
-          <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Crest Study Consult. All rights
-            reserved.
+          <p className="text-white text-sm md:text-base leading-relaxed">
+           Copyright © {new Date().getFullYear()} Crest Study Consult.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(
+            {footerLinks.map(
               (link, index) => (
                 <motion.div
-                  key={link}
+                  key={link.title}
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ delay: index * 0.1 + 0.7 }}
                   viewport={{ once: true }}
                 >
                   <Link
-                    href="#"
-                    className="text-gray-400 hover:text-[#DAA520] text-sm transition-colors"
+                    href={link.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-[#DAA520] text-sm md:text-base transition-colors"
                   >
-                    {link}
+                    {link.title}
                   </Link>
                 </motion.div>
               )

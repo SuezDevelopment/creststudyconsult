@@ -1,7 +1,5 @@
 "use client";
-
 import type React from "react";
-
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -43,7 +41,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import Footer from "@/components/sections/footer";
+import FooterSection from "@/components/sections/footer";
+import Header from "@/components/sections/header";
 
 export default function ContactPage() {
   const heroRef = useRef(null);
@@ -101,9 +100,7 @@ export default function ContactPage() {
 
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 2000));
-
     console.log("Contact form submitted:", formData);
-
     // Reset form
     setFormData({
       firstName: "",
@@ -122,91 +119,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white overflow-hidden flex flex-col items-center">
       {/* Header */}
-      <motion.header
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="sticky top-0 z-50 w-full flex items-center justify-around border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60"
-      >
-        <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-3"
-          >
-            <Link href="/" className="flex items-center space-x-3">
-              <Image
-                src="/crest-logo.png"
-                alt="Crest Study Consult"
-                width={40}
-                height={40}
-                className="rounded-lg"
-              />
-              <div className="flex flex-col">
-                <span className="text-lg font-bold text-[#62b514]">CREST</span>
-                <span className="text-xs font-medium text-[#313b3d]">
-                  STUDY CONSULT
-                </span>
-              </div>
-            </Link>
-          </motion.div>
-
-          <nav className="hidden md:flex items-center space-x-8">
-            {[
-              "Home",
-              "Services",
-              "Success Stories",
-              "Destinations",
-              "Contact",
-            ].map((item, index) => (
-              <motion.div
-                key={item}
-                initial={{ y: -20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: index * 0.1 + 0.3, duration: 0.5 }}
-              >
-                <Link
-                  href={
-                    item === "Home"
-                      ? "/"
-                      : item === "Services"
-                      ? "/services"
-                      : `#${item.toLowerCase().replace(" ", "")}`
-                  }
-                  className={`text-sm font-medium hover:text-[#62b514] transition-colors relative group ${
-                    item === "Contact" ? "text-[#62b514]" : ""
-                  }`}
-                >
-                  {item}
-                  <motion.div
-                    className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#DAA520] group-hover:w-full transition-all duration-300"
-                    whileHover={{ width: "100%" }}
-                  />
-                </Link>
-              </motion.div>
-            ))}
-          </nav>
-
-          <motion.div
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex items-center space-x-4"
-          >
-            <Button variant="ghost" className="hidden md:inline-flex">
-              Student Portal
-            </Button>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button className="bg-[#62b514] hover:bg-[#62b514]/90 shadow-lg">
-                Get Started
-              </Button>
-            </motion.div>
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <Menu className="h-5 w-5" />
-            </Button>
-          </motion.div>
-        </div>
-      </motion.header>
-
+      <Header />
       {/* Hero Section */}
       <section
         ref={heroRef}
@@ -726,8 +639,7 @@ export default function ContactPage() {
               Certified Counsellors
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get personalized guidance from our expert counselors. Fill out the
-              form below and we'll get back to you within 24 hours.
+              Connect with us for a free study abroad consultation with our expert advisors. We’ll guide you to the best-fit course, country, and university, while also helping you explore available scholarships and visa options.
             </p>
           </motion.div>
 
@@ -1148,7 +1060,7 @@ export default function ContactPage() {
       </section>
 
       {/* Footer */}
-      <Footer />
+      <FooterSection />
     </div>
   );
 }

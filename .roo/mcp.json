@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "server1": {
+      "command": "python",
+      "args": ["/path/to/server.py"],
+      "env": {
+        "API_KEY": "your_api_key"
+      },
+      "alwaysAllow": ["tool1", "tool2"],
+      "disabled": false
+    }
+  }
+}

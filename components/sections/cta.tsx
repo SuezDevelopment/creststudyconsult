@@ -72,8 +72,11 @@ export default function CTA() {
                   size="lg"
                   variant="secondary"
                   className="text-lg px-8 py-6 bg-white text-[#62b514] hover:bg-gray-100 shadow-xl"
+                  onClick={() => {
+                    window.location.href = "/contact";
+                  }}
                 >
-                  Book Free Consultation
+                  Book Your Free Consultation Now
                   <motion.div
                     animate={{ x: [0, 5, 0] }}
                     transition={{

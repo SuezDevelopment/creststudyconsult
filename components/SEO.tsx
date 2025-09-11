@@ -11,17 +11,17 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({
   title = "Crest Study Consult - Study Abroad Dreams Made Reality",
-  description = "Transform your future with world-class education. We guide ambitious students to top universities across the globe with personalized consulting and comprehensive support.",
-  keywords = "study abroad, international education, university consulting, student support, top universities, global education, study overseas, education consulting",
-  ogImage = "https://yourdomain.com/og-image.jpg", // Replace with your actual image URL
-  url = "https://yourdomain.com", // Replace with your actual site URL
+  description = "Study Abroad Consultants in Nigeria – Scholarships & Visa Guidance | Crest Study Consult. Transform your future with world-class education. We guide ambitious students to top universities across the globe with personalized consulting and comprehensive support.",
+  keywords = "uk, usa, canada, australia, germany, ireland, new zealand, study consultation, study abroad, international education, university consulting, student support, top universities, global education, study overseas, education consulting",
+  ogImage = "https://creststudyconsult.com/og-image.jpg", 
+  url = "https://creststudyconsult.com",
 }) => {
   return (
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="author" content="Your Company Name" />
+      <meta name="author" content="Crest Study Consult" />
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={url} />
 
