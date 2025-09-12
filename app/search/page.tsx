@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { Search, Filter, X, BookOpen, MapPin, Users, Clock, ArrowRight } from "lucide-react";
@@ -130,7 +130,8 @@ const searchData: SearchResult[] = [
 
 const categories = ["All", "Study Destinations", "Services", "Resources", "Contact"];
 
-export default function SearchPage() {
+// Search content component that uses useSearchParams
+function SearchContent() {
   const searchParams = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams?.get("q") || "");
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -477,5 +478,39 @@ export default function SearchPage() {
         </div>
       </div>
     </>
+  );
+}
+
+// Loading component for Suspense fallback
+function SearchLoading() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="h-12 bg-gray-200 rounded-lg mb-4 animate-pulse"></div>
+            <div className="h-6 bg-gray-200 rounded-lg mb-8 animate-pulse"></div>
+          </div>
+          <div className="flex flex-col md:flex-row gap-4 mb-8">
+            <div className="flex-1 h-12 bg-gray-200 rounded-lg animate-pulse"></div>
+            <div className="w-48 h-12 bg-gray-200 rounded-lg animate-pulse"></div>
+          </div>
+          <div className="grid gap-6">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="h-32 bg-gray-200 rounded-lg animate-pulse"></div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Main SearchPage component with Suspense boundary
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<SearchLoading />}>
+      <SearchContent />
+    </Suspense>
   );
 }
