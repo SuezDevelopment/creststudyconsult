@@ -22,95 +22,96 @@ import {
   Briefcase,
   Home,
   ChevronRight,
-  Heart,
-  Shield
+  Mountain,
+  Waves,
+  TreePine
 } from "lucide-react";
 
 const universities = [
   {
-    name: "University of Toronto",
-    location: "Toronto, ON",
+    name: "University of Auckland",
+    location: "Auckland",
     ranking: "#1",
-    programs: ["Engineering", "Business", "Medicine", "Computer Science"]
+    programs: ["Engineering", "Medicine", "Business", "Arts"]
   },
   {
-    name: "University of British Columbia",
-    location: "Vancouver, BC",
+    name: "University of Otago",
+    location: "Dunedin",
     ranking: "#2",
-    programs: ["Business", "Engineering", "Sciences", "Arts"]
+    programs: ["Medicine", "Dentistry", "Pharmacy", "Health Sciences"]
   },
   {
-    name: "McGill University",
-    location: "Montreal, QC",
+    name: "Victoria University of Wellington",
+    location: "Wellington",
     ranking: "#3",
-    programs: ["Medicine", "Law", "Engineering", "Arts"]
+    programs: ["Law", "Public Policy", "Creative Arts", "Science"]
   },
   {
-    name: "University of Waterloo",
-    location: "Waterloo, ON",
+    name: "University of Canterbury",
+    location: "Christchurch",
     ranking: "#4",
-    programs: ["Computer Science", "Engineering", "Mathematics", "Business"]
+    programs: ["Engineering", "Forestry", "Fine Arts", "Commerce"]
   }
 ];
 
 const programs = [
   {
-    category: "STEM",
-    fields: ["Computer Science", "Engineering", "AI & Machine Learning", "Environmental Science", "Mathematics"],
-    duration: "2-4 years",
-    averageCost: "CAD $25,000-45,000"
+    category: "Agriculture & Environmental Sciences",
+    fields: ["Agriculture", "Environmental Science", "Forestry", "Marine Science", "Viticulture"],
+    duration: "3-4 years",
+    averageCost: "NZ$25,000-35,000/year"
   },
   {
-    category: "Business",
-    fields: ["MBA", "Finance", "International Business", "Supply Chain", "Marketing"],
-    duration: "1-2 years",
-    averageCost: "CAD $30,000-60,000"
+    category: "Technology & Engineering",
+    fields: ["Software Engineering", "Civil Engineering", "Computer Science", "Information Technology", "Renewable Energy"],
+    duration: "4 years",
+    averageCost: "NZ$30,000-40,000/year"
   },
   {
-    category: "Healthcare",
-    fields: ["Medicine", "Nursing", "Public Health", "Pharmacy", "Physiotherapy"],
-    duration: "2-6 years",
-    averageCost: "CAD $28,000-70,000"
+    category: "Health Sciences",
+    fields: ["Medicine", "Nursing", "Physiotherapy", "Pharmacy", "Veterinary Science"],
+    duration: "4-6 years",
+    averageCost: "NZ$35,000-70,000/year"
   },
   {
-    category: "Liberal Arts",
-    fields: ["Psychology", "Political Science", "Communications", "Sociology", "History"],
-    duration: "2-4 years",
-    averageCost: "CAD $20,000-40,000"
+    category: "Creative Arts & Media",
+    fields: ["Film Production", "Animation", "Design", "Music", "Creative Writing"],
+    duration: "3-4 years",
+    averageCost: "NZ$25,000-35,000/year"
   }
 ];
 
 const requirements = [
   {
     title: "Academic Requirements",
-    items: ["Bachelor's degree (for graduate programs)", "GPA: 3.0+ (undergraduate), 3.3+ (graduate)", "Official transcripts and credentials"]
+    items: ["NCEA Level 3 or equivalent", "Bachelor's degree (for postgraduate)", "Specific subject prerequisites"]
   },
   {
-    title: "English Proficiency",
-    items: ["IELTS: 6.5+ (undergraduate), 7.0+ (graduate)", "TOEFL: 90+ (undergraduate), 100+ (graduate)", "CELPIP: 7+ (some programs)"]
+    title: "Language Proficiency",
+    items: ["IELTS 6.0-7.0 overall", "TOEFL iBT 80-100", "Cambridge English B2 First", "Pearson PTE Academic 50-65"]
   },
   {
-    title: "Standardized Tests",
-    items: ["SAT (some undergraduate programs)", "GRE/GMAT (graduate programs)", "Subject-specific tests (if required)"]
+    title: "Application Documents",
+    items: ["Personal Statement", "Academic Transcripts", "Letters of Reference", "Portfolio (for creative programs)"]
   },
   {
-    title: "Documentation",
-    items: ["Statement of Purpose", "Letters of Recommendation (2-3)", "Resume/CV", "Portfolio (program-specific)"]
+    title: "Financial Requirements",
+    items: ["Proof of funds (NZ$15,000+ per year)", "Bank statements", "Scholarship documentation", "Student visa application"]
   }
 ];
 
 const livingCosts = [
-  { category: "Accommodation", cost: "CAD $8,000-15,000/year", description: "On-campus residence or shared apartments" },
-  { category: "Food", cost: "CAD $3,000-4,500/year", description: "Meal plans, groceries, and dining" },
-  { category: "Transportation", cost: "CAD $1,200-2,000/year", description: "Public transit passes and travel" },
-  { category: "Personal Expenses", cost: "CAD $2,000-3,500/year", description: "Books, supplies, and entertainment" }
+  { category: "Accommodation", cost: "NZ$200-400/week", description: "Student halls or shared flats" },
+  { category: "Food & Groceries", cost: "NZ$80-120/week", description: "Groceries and occasional dining" },
+  { category: "Transportation", cost: "NZ$40-80/week", description: "Public transport and travel" },
+  { category: "Personal Expenses", cost: "NZ$50-100/week", description: "Books, entertainment, and activities" }
 ];
 
-export default function StudyInCanadaPage() {
+export default function StudyInNewZealandPage() {
   const { openModal } = useBookingModal();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
       {/* Schema Markup */}
       <script
         type="application/ld+json"
@@ -118,29 +119,29 @@ export default function StudyInCanadaPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
-            "name": "Study in Canada - Crest Study Consult",
-            "description": "Complete guide to studying in Canada. Expert assistance for Canadian university admissions, study permits, and academic programs.",
-            "url": "https://creststudyconsult.com/study-destinations/study-in-canada",
+            "name": "Study in New Zealand - Crest Study Consult",
+            "description": "Complete guide to studying in New Zealand. Expert assistance for New Zealand university admissions, student visas, and academic programs in Aotearoa.",
+            "url": "https://creststudyconsult.com/study-destinations/study-in-new-zealand",
             "serviceArea": {
               "@type": "Place",
-              "name": "Canada"
+              "name": "New Zealand"
             },
             "educationalCredentialAwarded": {
               "@type": "EducationalOccupationalCredential",
-              "name": "Canadian Higher Education Degrees",
-              "description": "Bachelor's, Master's, and Doctoral degrees from accredited Canadian universities",
+              "name": "New Zealand Higher Education Degrees",
+              "description": "Bachelor's, Master's, and Doctoral degrees from top New Zealand universities",
               "educationalLevel": "Higher Education",
-              "competencyRequired": ["Computer Science", "Business", "Engineering", "Medicine", "Liberal Arts"]
+              "competencyRequired": ["Agriculture", "Technology", "Health Sciences", "Creative Arts", "Environmental Sciences"]
             },
             "offers": {
               "@type": "Offer",
-              "name": "Canada Study Abroad Consultation",
-              "description": "Expert guidance for studying in Canada",
+              "name": "New Zealand Study Abroad Consultation",
+              "description": "Expert guidance for studying in New Zealand with stunning landscapes and innovative education",
               "category": "Educational Consulting"
             },
             "address": {
               "@type": "PostalAddress",
-              "addressCountry": "CA"
+              "addressCountry": "NZ"
             }
           })
         }}
@@ -158,14 +159,14 @@ export default function StudyInCanadaPage() {
               Study Destinations
             </Link>
             <ChevronRight className="h-4 w-4" />
-            <span className="text-gray-900 font-medium">Study in Canada</span>
+            <span className="text-gray-900 font-medium">Study in New Zealand</span>
           </nav>
         </div>
       </div>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-red-600/10 to-red-800/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-green-500/10" />
         <div className="container mx-auto max-w-7xl relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -174,26 +175,26 @@ export default function StudyInCanadaPage() {
             className="text-center mb-16"
           >
             <div className="flex items-center justify-center mb-6">
-              <span className="text-6xl mr-4">🇨🇦</span>
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
-                Study in Canada
+              <span className="text-6xl mr-4">🇳🇿</span>
+              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                Study in New Zealand
               </h1>
             </div>
             <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Experience world-class education in one of the most welcoming countries. Canada offers excellent universities, affordable tuition, post-graduation work opportunities, and a pathway to permanent residency.
+              Experience world-class education in one of the most beautiful countries on Earth. New Zealand offers innovative programs, stunning natural landscapes, and a welcoming multicultural environment.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mt-8">
               <Badge variant="secondary" className="text-lg py-2 px-4">
-                <Building className="h-4 w-4 mr-2" />
-                100+ Universities
+                <Mountain className="h-4 w-4 mr-2" />
+                Stunning Landscapes
               </Badge>
               <Badge variant="secondary" className="text-lg py-2 px-4">
-                <Users className="h-4 w-4 mr-2" />
-                800K+ International Students
+                <Waves className="h-4 w-4 mr-2" />
+                Adventure Capital
               </Badge>
               <Badge variant="secondary" className="text-lg py-2 px-4">
-                <Heart className="h-4 w-4 mr-2" />
-                Friendly & Safe
+                <TreePine className="h-4 w-4 mr-2" />
+                Clean Environment
               </Badge>
             </div>
           </motion.div>
@@ -210,34 +211,34 @@ export default function StudyInCanadaPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Study in Canada?
+              Why Study in New Zealand?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Discover the unique advantages of pursuing your education in Canada.
+              Discover the unique advantages of pursuing your education in Aotearoa.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: <Award className="h-8 w-8 text-red-600" />,
+                icon: <Mountain className="h-8 w-8 text-blue-600" />,
+                title: "Natural Beauty",
+                description: "Study surrounded by breathtaking landscapes, from mountains to beaches and everything in between."
+              },
+              {
+                icon: <Globe className="h-8 w-8 text-green-600" />,
+                title: "Safe Environment",
+                description: "One of the world's safest countries with a peaceful, welcoming society and low crime rates."
+              },
+              {
+                icon: <Award className="h-8 w-8 text-orange-600" />,
                 title: "Quality Education",
-                description: "Globally recognized degrees from top-ranked universities with excellent research facilities."
+                description: "Eight world-class universities with strong research programs and innovative teaching methods."
               },
               {
-                icon: <DollarSign className="h-8 w-8 text-green-600" />,
-                title: "Affordable Tuition",
-                description: "Lower tuition fees compared to US and UK, with excellent value for money."
-              },
-              {
-                icon: <Briefcase className="h-8 w-8 text-blue-600" />,
+                icon: <Briefcase className="h-8 w-8 text-purple-600" />,
                 title: "Work Opportunities",
-                description: "Post-graduation work permits and pathways to permanent residency."
-              },
-              {
-                icon: <Shield className="h-8 w-8 text-purple-600" />,
-                title: "Safe & Welcoming",
-                description: "One of the safest countries with a multicultural and inclusive society."
+                description: "Excellent post-study work rights and pathways to permanent residency for graduates."
               }
             ].map((highlight, index) => (
               <motion.div
@@ -271,10 +272,10 @@ export default function StudyInCanadaPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Top Universities in Canada
+              Top Universities in New Zealand
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Explore Canada's leading universities known for academic excellence.
+              Discover New Zealand's prestigious universities known for innovation and research excellence.
             </p>
           </motion.div>
 
@@ -298,7 +299,7 @@ export default function StudyInCanadaPage() {
                           <span className="text-gray-600">{university.location}</span>
                         </div>
                       </div>
-                      <Badge className="bg-red-600 hover:bg-red-700">
+                      <Badge className="bg-blue-600 hover:bg-blue-700">
                         {university.ranking}
                       </Badge>
                     </div>
@@ -335,7 +336,7 @@ export default function StudyInCanadaPage() {
               Popular Study Programs
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Discover the most popular academic programs in Canadian universities.
+              Explore the most sought-after academic programs in New Zealand universities.
             </p>
           </motion.div>
 
@@ -396,7 +397,7 @@ export default function StudyInCanadaPage() {
               Admission Requirements
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Key requirements for studying in Canada.
+              Essential requirements for studying in New Zealand.
             </p>
           </motion.div>
 
@@ -444,7 +445,7 @@ export default function StudyInCanadaPage() {
               Cost of Living
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Estimated annual living expenses for international students in Canada.
+              Estimated weekly living expenses for international students in New Zealand.
             </p>
           </motion.div>
 
@@ -470,7 +471,7 @@ export default function StudyInCanadaPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-red-600 to-red-800">
+      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-green-600">
         <div className="container mx-auto max-w-4xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -479,24 +480,24 @@ export default function StudyInCanadaPage() {
           >
             <GraduationCap className="h-16 w-16 text-white mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Study in Canada?
+              Ready to Study in New Zealand?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Get expert guidance for Canadian university admissions, study permits, and immigration pathways. Your Canadian education journey starts here!
+              Get expert guidance for New Zealand university admissions, student visas, and accommodation. Experience the beauty and innovation of Kiwi education!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-white text-red-600 hover:bg-gray-100 font-semibold px-8 py-3"
+                className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8 py-3"
                 onClick={() => openModal(true)}
               >
-                Get Free Canada Consultation
+                Get Free New Zealand Consultation
                 <ArrowRight className="h-5 w-5 ml-2" />
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-red-600 font-semibold px-8 py-3"
+                className="border-white text-white hover:bg-white hover:text-blue-600 font-semibold px-8 py-3"
                 asChild
               >
                 <Link href="/study-destinations">

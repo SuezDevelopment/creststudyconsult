@@ -32,19 +32,30 @@ export default function Header() {
 
   const navLinks = [
     { title: "Home", href: "/" },
-    { title: "Services", href: "/services" },
+    {
+      title: "Services",
+      href: "/services",
+      dropdown: [
+        { title: "Educational Counseling", href: "/services#counseling" },
+        { title: "University Applications", href: "/services#application" },
+        { title: "Visa Assistance", href: "/services#visa" },
+        { title: "Test Preparation", href: "/services#test-prep" },
+        { title: "Financial Planning", href: "/services#financial" },
+        { title: "Scholarships", href: "/services#study-abroad" },
+      ],
+    },
     // { title: "Success Stories", href: "/success-stories" },
     {
       title: "Study destinations",
       href: "/study-destinations",
       dropdown: [
-        { title: "USA", href: "/study-destinations/usa" },
-        { title: "Canada", href: "/study-destinations/canada" },
-        { title: "UK", href: "/study-destinations/uk" },
-        { title: "Australia", href: "/study-destinations/australia" },
-        { title: "Germany", href: "/study-destinations/germany" },
-        { title: "Ireland", href: "/study-destinations/ireland" },
-        { title: "New Zealand", href: "/study-destinations/new-zealand" },
+        { title: "USA", href: "/study-destinations/study-in-usa" },
+        { title: "Canada", href: "/study-destinations/study-in-canada" },
+        { title: "UK", href: "/study-destinations/study-in-uk" },
+        { title: "Australia", href: "/study-destinations/study-in-australia" },
+        { title: "Germany", href: "/study-destinations/study-in-germany" },
+        { title: "Ireland", href: "/study-destinations/study-in-ireland" },
+        { title: "New Zealand", href: "/study-destinations/study-in-new-zealand" },
       ],
     },
     { title: "Contact", href: "/contact" },
