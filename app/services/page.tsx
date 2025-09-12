@@ -437,7 +437,7 @@ export default function ServicesPage() {
               >
                 <Button
                   size="lg"
-                  onClick={openModal}
+                  onClick={() => openModal(true)}
                   className="text-lg px-8 py-6 bg-[#62b514] hover:bg-[#62b514]/90 shadow-xl group relative overflow-hidden"
                 >
                   <motion.div className="absolute inset-0 bg-[#DAA520] opacity-0 group-hover:opacity-20 transition-opacity duration-300" />

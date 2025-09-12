@@ -412,7 +412,7 @@ export function HeroSection() {
                 <Button
                   variant="outline"
                   size="lg"
-                  onClick={openModal}
+                  onClick={() => openModal(true)}
                   className="text-lg px-8 py-6 bg-transparent border-[#DAA520] text-[#DAA520] hover:bg-[#DAA520] hover:text-white"
                 >
                   Book Consultation

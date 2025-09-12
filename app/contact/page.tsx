@@ -19,6 +19,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { RedAsterisk } from "@/components/red-asteriks";
 import {
   Menu,
   Facebook,
@@ -668,7 +669,7 @@ export default function ContactPage() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="firstName">First Name *</Label>
+                        <Label htmlFor="firstName">First Name<RedAsterisk /></Label>
                         <Input
                           id="firstName"
                           value={formData.firstName}
@@ -682,7 +683,7 @@ export default function ContactPage() {
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="lastName">Last Name *</Label>
+                        <Label htmlFor="lastName">Last Name<RedAsterisk /></Label>
                         <Input
                           id="lastName"
                           value={formData.lastName}
@@ -698,7 +699,7 @@ export default function ContactPage() {
 
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="email">Email Address *</Label>
+                        <Label htmlFor="email">Email Address<RedAsterisk /></Label>
                         <Input
                           id="email"
                           type="email"
@@ -713,7 +714,7 @@ export default function ContactPage() {
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="phone">Phone Number *</Label>
+                        <Label htmlFor="phone">Phone Number<RedAsterisk /></Label>
                         <Input
                           id="phone"
                           type="tel"
@@ -761,7 +762,7 @@ export default function ContactPage() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="subject">Subject *</Label>
+                      <Label htmlFor="subject">Subject<RedAsterisk /></Label>
                       <Input
                         id="subject"
                         value={formData.subject}
@@ -775,7 +776,7 @@ export default function ContactPage() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message">Message *</Label>
+                      <Label htmlFor="message">Message<RedAsterisk /></Label>
                       <Textarea
                         id="message"
                         value={formData.message}

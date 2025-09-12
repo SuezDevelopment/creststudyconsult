@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { useBookingModal } from "@/hooks/use-booking-modal";
+import { useMobileContext } from "@/components/mobile-provider";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -12,7 +13,8 @@ import { useState } from "react";
 
 export default function Header() {
   const pathname = usePathname();
-  const { openModal } = useBookingModal();
+  const { openModal, isFullscreen } = useBookingModal();
+  const { isMobile } = useMobileContext();  
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const navLinks = [
@@ -134,9 +136,9 @@ export default function Header() {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button
               className="bg-[#62b514] hover:bg-[#62b514]/90 shadow-lg"
-              onClick={openModal}
+              onClick={() => openModal(true)}
             >
-              Help me study abroad
+              {isMobile ? "Study abroad" : "Help me study abroad"}
             </Button>
           </motion.div>
           <Button variant="ghost" size="icon" className="md:hidden">

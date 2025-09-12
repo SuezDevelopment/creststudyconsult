@@ -10,6 +10,8 @@ import { ConsentModalProvider } from "@/hooks/use-consent-modal";
 import { ConsentModal } from "@/components/consent-modal";
 import SEO from "@/components/SEO";
 import { MatomoTracker } from "@/components/matomo-tracker";
+import { Toaster } from "@/components/ui/toaster";
+import { Providers } from "@/components/providers";
 
 export const metadata: Metadata = {
   title: "Crest Study Consult - Study Abroad Dreams Made Reality",
@@ -109,14 +111,13 @@ export default function RootLayout({
       <body className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}>
         <ConsentProvider>
           <MatomoTracker />
-          <ConsentModalProvider>
-            <BookingModalProvider>
-              <BookingModal />
-              <ConsentModal />
-              <main>{children}</main>
-              <CookieBanner />
-            </BookingModalProvider>
-          </ConsentModalProvider>
+          <Providers>
+            <BookingModal />
+            <ConsentModal />
+            <main>{children}</main>
+            <CookieBanner />
+            <Toaster />
+          </Providers>
         </ConsentProvider>
       </body>
     </html>

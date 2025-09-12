@@ -4,7 +4,8 @@ import { createContext, useContext, useState, ReactNode } from 'react';
 
 interface BookingModalContextType {
   isOpen: boolean;
-  openModal: () => void;
+  isFullscreen: boolean;
+  openModal: (fullscreen?: boolean) => void;
   closeModal: () => void;
 }
 
@@ -20,12 +21,16 @@ export const useBookingModal = () => {
 
 export const BookingModalProvider = ({ children }: { children: ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
-  const openModal = () => setIsOpen(true);
+  const openModal = (fullscreen: boolean = false) => {
+    setIsFullscreen(fullscreen);
+    setIsOpen(true);
+  };
   const closeModal = () => setIsOpen(false);
 
   return (
-    <BookingModalContext.Provider value={{ isOpen, openModal, closeModal }}>
+    <BookingModalContext.Provider value={{ isOpen, isFullscreen, openModal, closeModal }}>
       {children}
     </BookingModalContext.Provider>
   );
