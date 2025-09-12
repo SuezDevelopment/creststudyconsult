@@ -1,8 +1,5 @@
 "use client";
 
-import Footer from "@/components/sections/footer";
-import Header from "@/components/sections/header";
-import { motion } from "framer-motion";
 import {
   ShieldCheck,
   FileText,
@@ -10,6 +7,7 @@ import {
   MessageSquare,
   Info,
 } from "lucide-react";
+import { PolicyHero, PolicySection, PolicyLayout, PolicyContent } from "@/components/policy";
 
 const termsSections = [
   {
@@ -70,72 +68,25 @@ const termsSections = [
 
 export default function TermsOfUsePage() {
   return (
-    <>
-      <Header />
-      <main className="bg-gray-50 min-h-screen">
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="py-20 md:py-32 bg-gradient-to-br from-[#62b514]/10 via-white to-[#DAA520]/10"
-        >
-          <div className="container mx-auto px-4 md:px-6 text-center">
-            <motion.h1
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-4xl md:text-6xl font-bold text-gray-900"
-            >
-              Terms of Use
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto"
-            >
-              Please read our terms of use carefully before using our website.
-            </motion.p>
-          </div>
-        </motion.section>
-
-        <motion.section
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="py-16"
-        >
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="max-w-4xl mx-auto">
-              {termsSections.map((section, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.8 + index * 0.2 }}
-                  className="mb-12 bg-white p-8 rounded-lg shadow-md border border-gray-200/80"
-                >
-                  <div className="flex items-center mb-6">
-                    {section.icon}
-                    <h2 className="text-2xl md:text-3xl font-bold text-gray-800 ml-4">
-                      {section.title}
-                    </h2>
-                  </div>
-                  <div className="space-y-4 text-gray-600 leading-relaxed">
-                    {section.content.map((paragraph, pIndex) => (
-                      <p
-                        key={pIndex}
-                        dangerouslySetInnerHTML={{ __html: paragraph }}
-                      />
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.section>
-      </main>
-      <Footer />
-    </>
+    <PolicyLayout>
+      <PolicyHero
+        title="Terms of Use"
+        description="Please read our terms of use carefully before using our website."
+        effectiveDate="[Insert Date]"
+      />
+      
+      <PolicyContent>
+        {termsSections.map((section, index) => (
+          <PolicySection
+            key={index}
+            title={section.title}
+            icon={section.icon}
+            content={section.content}
+            index={index}
+            useHtml={true}
+          />
+        ))}
+      </PolicyContent>
+    </PolicyLayout>
   );
 }

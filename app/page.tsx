@@ -35,6 +35,16 @@ import { useRouter } from "next/navigation";
 import Header from "@/components/sections/header";
 import { useBookingModal } from "@/hooks/use-booking-modal";
 import { HeroSection } from "@/components/sections/hero";
+import InternalLinks from "@/components/sections/internal-links";
+
+const destinationLinks = [
+  { href: "/study-destinations/study-in-uk", label: "Study in the UK" },
+  { href: "/study-destinations/study-in-usa", label: "Study in the USA" },
+  { href: "/study-destinations/study-in-canada", label: "Study in Canada" },
+  { href: "/study-destinations/study-in-australia", label: "Study in Australia" },
+  { href: "/study-destinations/study-in-germany", label: "Study in Germany" },
+  { href: "/study-destinations/study-in-ireland", label: "Study in Ireland" },
+];
 
 export default function CrestStudyConsult() {
   const { openModal } = useBookingModal();
@@ -284,6 +294,8 @@ export default function CrestStudyConsult() {
           </motion.div>
         </div>
       </section>
+
+      <InternalLinks title="Explore Your Future" links={destinationLinks} description="Discover top study destinations and find the perfect fit for your academic journey." />
 
       {/* Services Section - Creative Journey Design */}
       <section

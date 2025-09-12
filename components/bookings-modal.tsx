@@ -631,7 +631,7 @@ export const BookingModal = () => {
                 </Form>
               </div>
               <div
-                className={`flex-1 md:w-[40%] my-auto max-h-[80vh] hidden ${
+                className={`flex-1 md:w-[40%] max-h-[80vh] hidden ${
                   isFullscreen
                     ? "md:flex relative bg-gray-50"
                     : "md:flex relative"

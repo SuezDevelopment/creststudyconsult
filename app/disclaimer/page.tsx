@@ -1,9 +1,7 @@
 "use client";
 
-import FooterSection from "@/components/sections/footer";
-import Header from "@/components/sections/header";
-import { motion } from "framer-motion";
-import { ShieldAlert } from "lucide-react";
+import { PolicyLayout, PolicyHero, PolicyContent, PolicySection, PolicyContact } from "@/components/policy";
+import { AlertTriangle, Shield, FileText, Users, Globe, Info } from "lucide-react";
 
 export default function DisclaimerPage() {
   const disclaimerText = [
@@ -21,73 +19,48 @@ export default function DisclaimerPage() {
     },
   ];
 
-  return (
-    <>
-      <Header />
-      <main className="bg-gray-50 min-h-screen">
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="py-20 md:py-32 bg-gradient-to-br from-[#62b514]/10 via-white to-[#DAA520]/10"
-        >
-          <div className="container mx-auto px-4 md:px-6 text-center">
-            <motion.div
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="flex justify-center items-center mb-4"
-            >
-              <ShieldAlert className="w-12 h-12 text-[#DAA520]" />
-            </motion.div>
-            <motion.h1
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-4xl md:text-6xl font-bold text-gray-900"
-            >
-              Disclaimer
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto"
-            >
-              Please read our disclaimer carefully before using our website.
-            </motion.p>
-          </div>
-        </motion.section>
+  const disclaimerSections = disclaimerText.map((section, index) => {
+    const icons = [Shield, FileText, Users, Globe, Info, AlertTriangle];
+    return {
+      title: section.title,
+      icon: icons[index % icons.length],
+      content: section.content
+    };
+  });
 
-        <motion.section
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="py-16"
-        >
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-md border border-gray-200/80">
-              {disclaimerText.map((section, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.8 + index * 0.2 }}
-                  className="mb-8"
-                >
-                  <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-[#62b514] pb-2">
-                    {section.title}
-                  </h2>
-                  <p className="text-gray-600 leading-relaxed whitespace-pre-line">
-                    {section.content}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.section>
-      </main>
-      <FooterSection />
-    </>
+  const contactInfo = {
+    title: "Contact Us",
+    description: "For questions about this disclaimer or our services:",
+    email: "info@creststudyconsult.com",
+    phone: "+234 (0) 123 456 7890",
+    address: "Crest Study Consult\nLagos, Nigeria"
+  };
+
+  return (
+    <PolicyLayout>
+      <PolicyHero
+        title="Disclaimer"
+        description="Please read our disclaimer carefully before using our website and services. This disclaimer outlines the terms and conditions of use for Crest Study Consult's website and services."
+        effectiveDate="Last Updated: September 12, 2025"
+        icon={AlertTriangle}
+      />
+      
+      <PolicyContent>
+        {disclaimerSections.map((section, index) => (
+          <PolicySection
+            key={index}
+            title={section.title}
+            icon={<section.icon className="w-6 h-6" />}
+            content={section.content}
+            index={index}
+          />
+        ))}
+        
+        <PolicyContact
+          contactInfo={contactInfo}
+          index={disclaimerSections.length}
+        />
+      </PolicyContent>
+    </PolicyLayout>
   );
 }

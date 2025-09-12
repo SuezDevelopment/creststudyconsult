@@ -6,16 +6,29 @@ import { useMobileContext } from "@/components/mobile-provider";
 import Image from "next/image";
 import Link from "next/link";
 
-import { motion } from "framer-motion";
-import { Menu } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header() {
   const pathname = usePathname();
   const { openModal, isFullscreen } = useBookingModal();
   const { isMobile } = useMobileContext();  
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
 
   const navLinks = [
     { title: "Home", href: "/" },
@@ -141,11 +154,125 @@ export default function Header() {
               {isMobile ? "Study abroad" : "Help me study abroad"}
             </Button>
           </motion.div>
-          <Button variant="ghost" size="icon" className="md:hidden">
-            <Menu className="h-5 w-5" />
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="md:hidden relative z-50"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <motion.div
+              animate={{ rotate: isMobileMenuOpen ? 180 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
+            </motion.div>
           </Button>
         </motion.div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="fixed inset-0 z-40 md:hidden"
+          >
+            {/* Background Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-gray-100"
+            />
+            
+            {/* Menu Content */}
+            <motion.div
+              initial={{ y: -50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -50, opacity: 0 }}
+              transition={{ delay: 0.1, duration: 0.3 }}
+              className="relative flex flex-col items-center justify-center h-full px-6 pt-20"
+            >
+              <nav className="flex flex-col items-center space-y-8 w-full max-w-sm">
+                {displayedNavLinks.map((link, index) => (
+                  <motion.div
+                    key={link.title}
+                    initial={{ y: 30, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: index * 0.1 + 0.2, duration: 0.4 }}
+                    className="w-full"
+                  >
+                    {link.dropdown ? (
+                      <div className="w-full">
+                        <div className="text-center mb-4">
+                          <span className="text-2xl font-semibold text-gray-800 border-b-2 border-[#62b514] pb-2">
+                            {link.title}
+                          </span>
+                        </div>
+                        <div className="flex flex-col space-y-3">
+                          {link.dropdown.map((subLink, subIndex) => (
+                            <motion.div
+                              key={subLink.title}
+                              initial={{ x: -20, opacity: 0 }}
+                              animate={{ x: 0, opacity: 1 }}
+                              transition={{ delay: (index * 0.1) + (subIndex * 0.05) + 0.3, duration: 0.3 }}
+                            >
+                              <Link
+                                href={subLink.href}
+                                className="block text-center py-3 px-6 text-lg font-medium text-gray-700 hover:text-[#62b514] hover:bg-white/50 rounded-lg transition-all duration-300 transform hover:scale-105"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                              >
+                                {subLink.title}
+                              </Link>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className={`block text-center py-4 px-8 text-2xl font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 ${
+                          pathname === link.href 
+                            ? "text-[#62b514] bg-white/70 shadow-md" 
+                            : "text-gray-800 hover:text-[#62b514] hover:bg-white/50"
+                        }`}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {link.title}
+                      </Link>
+                    )}
+                  </motion.div>
+                ))}
+                
+                {/* Mobile CTA Button */}
+                <motion.div
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: displayedNavLinks.length * 0.1 + 0.3, duration: 0.4 }}
+                  className="pt-8"
+                >
+                  <Button
+                    className="bg-[#62b514] hover:bg-[#62b514]/90 shadow-lg text-lg py-6 px-8 rounded-xl transform hover:scale-105 transition-all duration-300"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      openModal(true);
+                    }}
+                  >
+                    Help me study abroad
+                  </Button>
+                </motion.div>
+              </nav>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }
